@@ -22,6 +22,7 @@ export const useCartStore = defineStore("cart", {
     isLoading: false,
     productNameList: [],
     ordersProductName: "",
+    userMileage: 0
   }),
   actions: {
     updateTotalPrice(updatePrice) {
@@ -145,9 +146,11 @@ export const useCartStore = defineStore("cart", {
       }
       let userMileage;
       if (this.totalPoint.includes(",")) {
-        userMileage = parseInt(this.totalPoint.replace(",", ""));
+
+        this.userMileage = parseInt(this.totalPoint.replace(",", ""));
       } else {
-        userMileage = parseInt(this.totalPoint);
+        this.userMileage = parseInt(this.totalPoint);
+
       }
 
       // 주문 정보 생성
@@ -161,7 +164,7 @@ export const useCartStore = defineStore("cart", {
         couponIdxList: this.couponIdxList,
         productCouponMap: this.productCouponMap,
         ordersCartIdxList: this.ordersCartIdxList,
-        mileage: userMileage,
+        mileage: this.userMileage,
       };
 
       // 아임포트 결제 요청
