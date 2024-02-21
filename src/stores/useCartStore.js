@@ -144,7 +144,7 @@ export const useCartStore = defineStore("cart", {
         console.error("IMP 객체를 찾을 수 없습니다.");
         return;
       }
-      let userMileage;
+      // let userMileage;
       if (this.totalPoint.includes(",")) {
 
         this.userMileage = parseInt(this.totalPoint.replace(",", ""));
