@@ -97,7 +97,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a href="/product"> CATEGORYyyxxxy </a>
+                <a href="/product"> CATEGORsssssYyyxxxy </a>
                 <div class="nav-item-dropdown">
                   <div class="dropdown-menu">
                     <div class="dropdown-menu-header">
